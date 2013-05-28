@@ -67,4 +67,14 @@ Omrails::Application.configure do
   
   # In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  # Configuring Amaxon S3 for Paperclip file uploads
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => 'onemonthrailsandy',
+      :access_key_id => 'AKIAJIGEOH7ZGNPNGFIQ',
+      :secret_access_key => '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'
+    }
+  }
 end
